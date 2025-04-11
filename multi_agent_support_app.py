@@ -44,7 +44,7 @@ def extract_actions(text):
 # Load historical data
 def load_historical_data():
     try:
-        df = pd.read_csv("C:\\Users\\pooji\\OneDrive\\Desktop\\HACKathon\\Dataset\\[Usecase 7] AI-Driven Customer Support Enhancing Efficiency Through Multiagents\\Conversation\\Historical_ticket_data.csv")
+        df = pd.read_csv("Historical_ticket_data.csv")
         df.columns = [col.strip() for col in df.columns]
         if 'Issue Category' not in df.columns or 'Sentiment' not in df.columns or 'Solution' not in df.columns:
             st.error("CSV must contain 'Issue Category', 'Sentiment', and 'Solution'.")
